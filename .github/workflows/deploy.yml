@@ -34,8 +34,4 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
       - name: Force new deployment on Amazon ECS
-        run: |
-          aws ecs update-service \
-            --cluster express-backend \
-            --express-task-service-22obwvi2 \
-            --force-new-deployment
+        run: aws ecs update-service --cluster express-backend --service express-task-service-22obwvi2 --force-new-deployment
