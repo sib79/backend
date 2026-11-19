@@ -36,6 +36,6 @@ jobs:
       - name: Force new deployment on Amazon ECS
         run: |
           aws ecs update-service \
-            --cluster express-cluster \
-            --service express-service \
+            --cluster express-backend \
+            --service express-task-service-x1hkmyix \
             --force-new-deployment
