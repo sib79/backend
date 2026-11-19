@@ -37,5 +37,5 @@ jobs:
         run: |
           aws ecs update-service \
             --cluster express-backend \
-            --service express-task-service-x1hkmyix \
+            --express-task-service-22obwvi2 \
             --force-new-deployment
